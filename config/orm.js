@@ -1,10 +1,4 @@
 var connection = require("./connection.js");
-
-connection.connect(function(err) {
-    if (err) throw err;
-    console.log("connected as id " + connection.threadId);
-  });
-
 var orm={
   selectALL : function(tableInput,cb) {
     var queryString = "SELECT * FROM ?? ";
