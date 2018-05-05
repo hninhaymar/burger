@@ -1,6 +1,21 @@
-var orm = require("../config/orm.js");
+var Sequelize = require("sequelize");
+// sequelize (lowercase) references our connection to the DB.
+var connection = require("../config/connection.js");
 
-var burgers = {
+var burgers = connection.define("burgers",{
+    burger_name: {
+        type: Sequelize.STRING
+    },
+    devour: {
+        type: Sequelize.BOOLEAN
+    }
+}, {
+    timestamps: false
+  });
+
+burgers.sync();
+
+/*var burgers = {
     all: function(cb) {
       orm.selectALL("burgers", function(res) {
         cb(res);
@@ -16,6 +31,6 @@ var burgers = {
             cb(res);
         });
     }
-};
+}; */
 
  module.exports = burgers;
