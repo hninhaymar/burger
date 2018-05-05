@@ -1,0 +1,34 @@
+main {
+    background-color: yellow;
+    padding: 20px;
+    margin: 20px;
+}
+
+#container {
+    background-color: yellow;
+    float: center;
+    margin: auto;
+    width: 50%;
+}
+
+#left {
+    float: left;
+    border-style: solid;
+    border-color: black;
+    padding: 20px;
+    margin: 20px;
+}
+
+#right {
+    float: right;
+    border-style: solid;
+    border-color: black;
+    padding: 20px;
+    margin: 20px;
+}
+
+img {
+    float: center;
+    width: 150px;
+    height: 150px;
+}
