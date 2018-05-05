@@ -1,8 +1,15 @@
-var Sequelize = require("sequelize");
+/*var Sequelize = require("sequelize");
 var sequelize;
 
 if (process.env.JAWSDB_URL) {
-  sequelize = mysql.createConnection(process.env.JAWSDB_URL);
+  //sequelize = mysql.createConnection(process.env.JAWSDB_URL);
+  sequelize = new Sequelize(process.env.JAWSDB_URL, {
+    dialect:  'mysql',
+    protocol: 'postgres',
+    port:     match[4],
+    host:     match[3],
+    logging:  true //false
+  })
 }
 else {
   sequelize = new Sequelize("burgers_db", "root", "haymarMySql2018", {
@@ -14,12 +21,12 @@ else {
       idle: 10000
     }
   });
-}
+}*/
 
 // Exports the connection for other files to use
-module.exports = sequelize;
+//module.exports = sequelize;
+var mysql = require("mysql");
 
-/*
 var connection;
 
 if (process.env.JAWSDB_URL) {
@@ -46,7 +53,7 @@ connection.connect(function(err) {
     return;
   }
   console.log('Connected to MySQL database as id ' + connection.threadId + '\n\n');
-});*/
+});
 
 
-  //module.exports = connection;
+  module.exports = connection;
